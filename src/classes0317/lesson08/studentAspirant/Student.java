@@ -49,8 +49,12 @@ public class Student {
         this.group = group;
     }
 
-    public void printStudent(){
-        System.out.println(this.getFirstName() + " " + this.lastName);
-        System.out.println(this.getGroup() + " " + this.getAverageMark());
+    public void printStudent() {
+        System.out.println("Name: " + this.getFirstName() + " " + this.lastName
+                + "\tGroup: " + this.getGroup() + "\tMark " + this.getAverageMark() + "\t\tScholarship: " + getScholarShip() + "$");
+    }
+
+    public int getScholarShip() {
+        return getAverageMark() >= 5 ? 180 : 100;
     }
 }

@@ -25,5 +25,7 @@ public class Aspirant extends Student {
         System.out.println(this.getScienceName());
     }
 
-    
+    public int getScholarShip() {
+        return getAverageMark() >= 5 ? 200 : 180;
+    }
 }
