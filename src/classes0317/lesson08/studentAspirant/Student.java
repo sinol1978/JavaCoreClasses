@@ -54,7 +54,7 @@ public class Student {
                 + "\tGroup: " + this.getGroup() + "\tMark " + this.getAverageMark() + "\t\tScholarship: " + getScholarShip() + "$");
     }
 
-    public int getScholarShip() {
+    protected int getScholarShip() {
         return getAverageMark() >= 5 ? 180 : 100;
     }
 }
