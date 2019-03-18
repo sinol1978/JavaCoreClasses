@@ -51,6 +51,6 @@ public class Rectangle extends Shape {
 
     @Override
     public void draw() {
-        System.out.println("Drawing circle " + getPointX1() + "; " + getPointY1() + getPointX1() + getPointY2() + " \tColor: " + getColor());
+        System.out.println("Drawing rectangle " + getPointX1() + "; " + getPointY1() + "; " + getPointX1() + "; " + getPointY2() + "; " + " \tColor: " + getColor());
     }
 }
