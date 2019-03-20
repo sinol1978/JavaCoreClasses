@@ -1,4 +1,4 @@
-package classes0307.lesson09.ShapesAbstractClass;
+package classes0317.lesson09.shapesabstractclass;
 
 /**
  * Создайте суперкласс Shape и его наследники Circle, Rectangle.

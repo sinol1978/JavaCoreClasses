@@ -1,4 +1,4 @@
-package classes0307.lesson09.ShapesAbstractClass;
+package classes0317.lesson09.shapesabstractclass;
 
 public class Rectangle extends Shape {
     private int pointX1;
