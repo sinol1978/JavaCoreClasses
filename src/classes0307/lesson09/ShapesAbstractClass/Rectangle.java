@@ -53,4 +53,39 @@ public class Rectangle extends Shape {
     public void draw() {
         System.out.println("Drawing rectangle " + getPointX1() + "; " + getPointY1() + "; " + getPointX1() + "; " + getPointY2() + "; " + " \tColor: " + getColor());
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+
+        Rectangle rectangle = (Rectangle) o;
+
+        if (pointX1 != rectangle.pointX1) return false;
+        if (pointX2 != rectangle.pointX2) return false;
+        if (pointY1 != rectangle.pointY1) return false;
+        return pointY2 == rectangle.pointY2;
+
+    }
+
+    @Override
+    public String toString() {
+        return "Rectangle{" +
+                "pointX1=" + pointX1 +
+                ", pointX2=" + pointX2 +
+                ", pointY1=" + pointY1 +
+                ", pointY2=" + pointY2 +
+                "} " + super.toString();
+    }
+
+    @Override
+    public int hashCode() {
+        int result = super.hashCode();
+        result = 31 * result + pointX1;
+        result = 31 * result + pointX2;
+        result = 31 * result + pointY1;
+        result = 31 * result + pointY2;
+        return result;
+    }
 }

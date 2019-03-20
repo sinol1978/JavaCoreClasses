@@ -43,4 +43,36 @@ public class Circle extends Shape {
     public void draw() {
         System.out.println("Drawing circle " + getPointX() + "; " + getPointY() + "\tRadius: " + getRadius() + " \tColor: " + getColor());
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+
+        Circle circle = (Circle) o;
+
+        if (pointX != circle.pointX) return false;
+        if (pointY != circle.pointY) return false;
+        return radius == circle.radius;
+
+    }
+
+    @Override
+    public String toString() {
+        return "Circle{" +
+                "pointX=" + pointX +
+                ", pointY=" + pointY +
+                ", radius=" + radius +
+                "} " + super.toString();
+    }
+
+    @Override
+    public int hashCode() {
+        int result = super.hashCode();
+        result = 31 * result + pointX;
+        result = 31 * result + pointY;
+        result = 31 * result + radius;
+        return result;
+    }
 }

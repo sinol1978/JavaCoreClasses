@@ -18,5 +18,13 @@ public class MainApp {
         for(Shape item : shapes){
             item.draw();
         }
+
+        Circle circle2 = new Circle("Red", 3, 4, 10);
+        Rectangle rect = new Rectangle("Blue", 1,1,1,1);
+        System.out.println(circle1.equals(circle2));
+        System.out.println(circle1.equals(rect));
+
+        System.out.println(circle1);
+        System.out.println(rect);
     }
 }
