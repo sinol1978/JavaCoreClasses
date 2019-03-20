@@ -15,5 +15,8 @@ public class Main {
         for(Printable item : prints){
             item.print();
         }
+
+        Magazine.printOnlyMagazines(prints);
+        Book.printOnlyBooks(prints);
     }
 }
