@@ -6,6 +6,18 @@ public class Main {
         System.out.println(season);
         printSeazon(season);
 
+        printAllSeasons(season);
+
+        Season anotherSeason = Season.valueOf("WINTER");
+        System.out.println(anotherSeason + " " + anotherSeason.getAvgTemp());
+
+    }
+
+    private static void printAllSeasons(Season season) {
+        Season[] seasons = season.values();
+        for(Season item : seasons){
+            System.out.println(item + "\t" + item.getAvgTemp() + "\t" + item.getDescr());
+        }
     }
 
     private static void printSeazon(Season seazon){
