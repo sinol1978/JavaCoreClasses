@@ -11,6 +11,18 @@ public class Task01strings {
         System.out.println(isStringContains(str, "Java"));
 
         checkString(str);
+
+        System.out.println(getLastChar(str));
+
+        System.out.println(str.indexOf("Java"));
+
+        System.out.println(str.replace('a', 'o'));
+        System.out.println(str.toUpperCase());
+        System.out.println(str.toLowerCase());
+
+        System.out.println(str.substring(str.indexOf("Java"), 11));
+
+        System.out.println(getResultSB(3, 56));
     }
 
     private static boolean isStringEndsWith(String str1, String str2) {
@@ -29,5 +41,23 @@ public class Task01strings {
         System.out.println(str.endsWith("!!!"));
         System.out.println(str.startsWith("I like"));
         System.out.println(str.contains("Java"));
+    }
+
+    private static char getLastChar(String str) {
+        char c = str.charAt(str.length() - 1);
+        return c;
+    }
+
+    private static StringBuilder getResultSB(int a, int b) {
+        StringBuilder result = new StringBuilder();
+        result.append(a).append(" + ").append(b).append(" = ").append(a + b)
+                .append("\n");
+        result.append(a).append(" - ").append(b).append(" = ").append(a - b)
+                .append("\n");
+        result.append(a).append(" * ").append(b).append(" = ").append(a * b)
+                .append("\n");
+        result.append(a).append(" / ").append(b).append(" = ").append((double) a / b)
+                .append("\n");
+        return result;
     }
 }
