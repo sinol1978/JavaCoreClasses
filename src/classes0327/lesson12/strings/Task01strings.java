@@ -23,6 +23,8 @@ public class Task01strings {
         System.out.println(str.substring(str.indexOf("Java"), 11));
 
         System.out.println(getResultSB(3, 56));
+        StringBuilder stringBuilder = getResultSB(3, 56);
+        System.out.println(getResultSBWithReplace(stringBuilder, "=", " is "));
     }
 
     private static boolean isStringEndsWith(String str1, String str2) {
@@ -60,4 +62,14 @@ public class Task01strings {
                 .append("\n");
         return result;
     }
+
+    private static StringBuilder getResultSBWithReplace(StringBuilder stringBuilder, String stringIn, String stringOut) {
+        int posIndex;
+        while ((posIndex = stringBuilder.indexOf(stringIn)) != -1) {
+            stringBuilder.deleteCharAt(posIndex);
+            stringBuilder.insert(posIndex, stringOut);
+        }
+        return stringBuilder;
+    }
+
 }
