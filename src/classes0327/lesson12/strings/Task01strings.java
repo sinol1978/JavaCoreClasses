@@ -66,8 +66,9 @@ public class Task01strings {
     private static StringBuilder getResultSBWithReplace(StringBuilder stringBuilder, String stringIn, String stringOut) {
         int posIndex;
         while ((posIndex = stringBuilder.indexOf(stringIn)) != -1) {
-            stringBuilder.deleteCharAt(posIndex);
-            stringBuilder.insert(posIndex, stringOut);
+//            stringBuilder.deleteCharAt(posIndex);
+//            stringBuilder.insert(posIndex, stringOut);
+            stringBuilder.replace(posIndex, posIndex + stringIn.length(), stringOut);
         }
         return stringBuilder;
     }
