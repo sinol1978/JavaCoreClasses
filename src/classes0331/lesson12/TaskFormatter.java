@@ -13,7 +13,6 @@ public class TaskFormatter {
     public static void main(String[] args) {
         printFormattedString("John Smith", 11, "Java");
         printFormattedString("Michael Green", 10, "C#");
-
     }
 
     private static void printFormattedString(String name, int mark, String subject){
