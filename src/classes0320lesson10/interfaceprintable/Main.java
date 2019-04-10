@@ -10,7 +10,14 @@ public class Main {
 
         Magazine m1 = new Magazine("AutoMir");
         Magazine m2 = new Magazine("Sports Illustrated");
-        Printable[] prints = {b1, b2, m1, m2};
+
+        Printable newsPaper = new Printable() {
+            @Override
+            public void print() {
+                System.out.println("Printing Newspaper");
+            }
+        };
+        Printable[] prints = {b1, b2, m1, m2, newsPaper};
 
         for(Printable item : prints){
             item.print();

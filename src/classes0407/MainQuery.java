@@ -16,5 +16,12 @@ public class MainQuery {
 
         System.out.println(Arrays.toString(User.class.getClasses()));
         System.out.println(Arrays.toString(User.class.getDeclaredMethods()));
+
+        UserStatic.setLogin("UsSt");
+        UserStatic.setPassword("UsStPass");
+        UserStatic.Query query2 = new UserStatic.Query();
+        query2.printToLog();
+
+
     }
 }
