@@ -17,7 +17,13 @@ public class Main {
                 System.out.println("Printing Newspaper");
             }
         };
-        Printable[] prints = {b1, b2, m1, m2, newsPaper};
+
+        /**
+         * LAMBDA EXPRESSION
+         */
+        Printable newsPaper1 = () -> System.out.println("Printing Newspaper");
+
+        Printable[] prints = {b1, b2, m1, m2, newsPaper, newsPaper1};
 
         for(Printable item : prints){
             item.print();
