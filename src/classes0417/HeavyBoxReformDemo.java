@@ -16,17 +16,19 @@ public class HeavyBoxReformDemo {
 
         //HomeWork--------------------------------------------
         Object[] objectArray = boxlist.toArray();
-        System.out.println("ObjectArray:");
+        System.out.println("New Array 1:");
         System.out.println(Arrays.toString(objectArray));
         System.out.println();
 
         HeavyBox[] heavyBoxes = new HeavyBox[boxlist.size()];
         boxlist.toArray(heavyBoxes);
-        System.out.println("New Array:");
+        System.out.println("New Array 2:");
         System.out.println(Arrays.toString(heavyBoxes));
         System.out.println();
 
-
+        HeavyBox[] heavyBoxes1 = boxlist.toArray(new HeavyBox[0]);
+        System.out.println("New Array 3:");
+        System.out.println(Arrays.toString(heavyBoxes1));
         //-----------------------------------------------------
         List<HeavyBox> superHB = getSuperHeavyBoxes(boxlist);
         superHB.forEach(System.out::println);
