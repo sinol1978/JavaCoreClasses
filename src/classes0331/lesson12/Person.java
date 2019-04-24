@@ -3,6 +3,7 @@ package classes0331.lesson12;
 /**
  * Created by student on 3/31/2019.
  */
+
 public class Person {
     private String fullName;
     private int age;
